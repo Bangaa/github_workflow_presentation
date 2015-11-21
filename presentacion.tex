@@ -67,9 +67,9 @@
 		\item Crear una rama sobre algún tópico
 		\item Hacer commits en la rama
 		\item Abrir una petición de integración
-		\item Recibir la aprobación de un tercero, como por ejemplo, algún 
-			miembro del equipo de estándares.
-		\item Probar los cambios hechos, en producción.
+		\item Discutir y revisar el código. Puede que existan cosas que tengas 
+			que corregir antes de mezclar con \texttt{master}.
+		\item Probar los cambios implementados.
 		\item Si estamos seguros de que funciona y es estable $\rightarrow$ 
 			mezclar los cambios a la rama \texttt{master}
 	\end{enumerate}
@@ -77,7 +77,7 @@
 
 \subsection{Nueva rama}
 \plain{Crear nueva rama}
-\begin{frame}[fragile]
+\begin{frame}[fragile,allowframebreaks]
 	\frametitle{Crear rama}
 
 	\begin{lstlisting}
@@ -93,7 +93,13 @@
 
 	para crearla pero quedarse en la rama actual.
 
-	\textbf{TIPS}: Hay una sola regla que se debe respetar siempre: todo lo que 
+	Cuando se crea una nueva rama en tu proyecto, estas creando un ambiente en 
+	donde puedes experimentar nuevas ideas. Los cambios que hagas en tu rama no 
+	afectan a \texttt{master}, así que puedes estar tranquilo sabiendo que solo 
+	será mezclada con \texttt{master} cuando haya sido revisada por el resto 
+	del equipo de trabajo.
+
+	\textbf{OJO}: Hay una sola regla que se debe respetar siempre: todo lo que 
 	esté en \texttt{master} está listo para salir a producción. Por este motivo 
 	cada vez que se quiera trabajar en algo se debe crear la rama desde 
 	\texttt{master}.
@@ -106,7 +112,7 @@
 \subsection{Hacer cambios en la rama}
 \plain{Hacer cambios en la rama}
 \begin{frame}[fragile]
-	\frametitle{Hacer commits en la rama creada}
+	\frametitle{Agregar archivos a la confirmación}
 
 	Luego de hacer algunos cambios se deben agregar los archivos que se quieren 
 	incluir en el commit.
@@ -127,8 +133,7 @@
 		$ git add .
 	\end{lstlisting}
 
-	ya que al querer revertir un cambio en particular, se puede estar 
-	revirtiendo un archivo que no tiene que ver con el commit.
+	sino solamente los archivos que tengan que ver con el cambio hecho.
 \end{frame} 
 
 \begin{frame}[fragile]
@@ -217,8 +222,9 @@
 
 	Una vez que ha sido abierto un pull request, el equipo o persona que revisa 
 	tu código puede tener dudas o comentarios.
-	\pause Puede que el código no encaje con el estilo del proyecto\pause... o 
-	que falten hacer pruebas unitarias\pause... o quizás está todo perfecto y 
+
+	\pause Puede que el código no encaje con el estilo del proyecto \pause... o 
+	que falten hacer pruebas unitarias \pause... o quizás está todo perfecto y 
 	listo para integrar.
 	\pause
 	Los \textit{pull request} están diseñados para incentivar y capturar este 
