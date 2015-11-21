@@ -231,8 +231,20 @@
 	tipo de conversaciones.
 \end{frame}
 
-\begin{frame}
-	\frametitle{Implementar los cambios en producción}
+\subsection{Verificar}
+\plain{Verificar}
+\begin{frame}[fragile]
+	\frametitle{Verificar los cambios en producción}
+
+	Básicamente es probar los cambios, como si su rama fuera la rama principal.  
+	En nuestro muy puntual caso sería correr el server (verificar que estamos 
+	en nuestra rama)
+
+	\begin{lstlisting}
+		$ rails s
+	\end{lstlisting}
+
+	Y probar las nuevas funcionalidades que implementamos.
 \end{frame}
 
 \begin{frame}[fragile]
