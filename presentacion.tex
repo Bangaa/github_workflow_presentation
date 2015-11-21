@@ -27,7 +27,7 @@
 
 \title{GitHub Flow}
 \subtitle{Flujo de trabajo estándar del proyecto}
-\date{17 de noviembre 2015}
+\date{{\the\day} de noviembre 2015}
 \author{Ian Mejías}
 \institute{Grupo de estándares}
 
@@ -119,7 +119,7 @@
 
 	\begin{lstlisting}
 		$ git add <archivo>
-		$ git add <carpeta>
+		$ git add <carpeta> #agrega todos los archivos de la carpeta
 		$ git add *.js      #agrega todos los archivos que terminen en .js
 		...
 	\end{lstlisting}
@@ -133,7 +133,8 @@
 		$ git add .
 	\end{lstlisting}
 
-	sino solamente los archivos que tengan que ver con el cambio hecho.
+	sino solamente los archivos que tengan que ver con el cambio que vas a 
+	hacer.
 \end{frame} 
 
 \begin{frame}[fragile]
@@ -197,10 +198,10 @@
 	que hiciste, como entradas de un foro. Puedes abrir un \emph{pull request} 
 	en cualquier etapa del proceso de desarrollo:
 	\begin{itemize}[<+(1)->]
-		\item cuando no tienes nada de código y quieres compartir ideas o 
+		\item Cuando no tienes nada de código y quieres compartir ideas o 
 			mostrar maquetas
-		\item cuando estés atascado y necesites ayuda o consejos.
-		\item o cuando hayas terminado y quieres que alguien revise tu trabajo
+		\item Cuando estés atascado y necesites ayuda o consejos.
+		\item O cuando hayas terminado y quieres que alguien revise tu trabajo
 	\end{itemize}
 	\pause
 	Usando el sistema de \emph{@menciones} puedes pedir \textit{feedback} a un 
@@ -237,8 +238,8 @@
 	\frametitle{Verificar los cambios en producción}
 
 	Básicamente es probar los cambios, como si su rama fuera la rama principal.  
-	En nuestro muy puntual caso sería correr el server (verificar que estamos 
-	en nuestra rama)
+	En nuestro caso muy puntual sería correr el server (verificando previamente 
+	que estamos en nuestra rama)
 
 	\begin{lstlisting}
 		$ rails s
@@ -257,18 +258,20 @@
 	Una vez que se ha mezclado, los \textit{pull request} guardan un registro 
 	de los cambios históricos a tus commits.
 
-	\textbf{TIP:} Cuando un \textit{pull request es mezclado} las incidencias 
-	(\textit{issues}) asociadas tambien son cerradas. Por ejemplo escribiendo 
-	\texttt{Closes \#32} cerraría la incidencia numero 32 en el repositorio.  
-	Para más información ver 
+	\textbf{TIP:} Incorporando ciertas palabras claves en el texto de tu 
+	\textit{pull request} puedes asociar incidencias al código. Cuando un 
+	\textit{pull request} es mezclado, las incidencias (\textit{issues}) 
+	asociadas, también son cerradas. Por ejemplo escribiendo \texttt{Closes 
+		\#32} cerraría la incidencia numero 32 en el repositorio.  Para más 
+	información ver 
 	\href{https://help.github.com/articles/closing-issues-via-commit-messages/}{\em 
-		Closing an issue in the same repository} de la ayuda de GitHub.
+		Closing an issue in the same repository} en la ayuda de GitHub.
 \end{frame}
 
 \plain{¿Preguntas?}
 
 \section{Bibliografía}
-\begin{frame}[allowframebreaks]
+\begin{frame}
 	\frametitle{Referencias}
 
 	\printbibliography[heading=none]
