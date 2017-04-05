@@ -36,7 +36,7 @@
 \maketitle
 
 \begin{frame}
-  \frametitle{Table of Contents}
+  \frametitle{Tabla de contenidos}
   \setbeamertemplate{section in toc}[sections numbered]
   \tableofcontents%[hideallsubsections]
 \end{frame}
@@ -80,16 +80,16 @@
 \begin{frame}[fragile,allowframebreaks]
 	\frametitle{Crear rama}
 
-	\begin{lstlisting}
-		$ git checkout -b <topico> master
-	\end{lstlisting}
+\begin{lstlisting}
+$ git checkout -b <topico> master
+\end{lstlisting}
 
 	Para crear una rama con el nombre \texttt{topico} y saltar inmediatamente a 
 	ella, o
 
-	\begin{lstlisting}
-		$ git branch <topico> master
-	\end{lstlisting}
+\begin{lstlisting}
+$ git branch <topico> master
+\end{lstlisting}
 
 	para crearla pero quedarse en la rama actual.
 
@@ -117,21 +117,21 @@
 	Luego de hacer algunos cambios se deben agregar los archivos que se quieren 
 	incluir en el commit.
 
-	\begin{lstlisting}
-		$ git add <archivo>
-		$ git add <carpeta> #agrega todos los archivos de la carpeta
-		$ git add *.js      #agrega todos los archivos que terminen en .js
-		...
-	\end{lstlisting}
+\begin{lstlisting}
+$ git add <archivo>
+$ git add <carpeta> #agrega todos los archivos de la carpeta
+$ git add *.js      #agrega todos los archivos que terminen en .js
+...
+\end{lstlisting}
 
 	Los commits son considerados como unidades de cambio independientes 
 	permitiendonos hacer un \emph{rollback} de los cambios hechos. Es por esta 
 	razón que no se recomienda agregar todos los archivos cambiados con:
 
 
-	\begin{lstlisting}
-		$ git add .
-	\end{lstlisting}
+\begin{lstlisting}
+$ git add .
+\end{lstlisting}
 
 	sino solamente los archivos que tengan que ver con el cambio que vas a 
 	hacer.
@@ -144,18 +144,18 @@
 	\begin{enumerate}[<+(1)->]
 		\item{
 				Escribiendo el mensaje en la misma linea de comandos
-				\begin{lstlisting}
-					$ git commit -m <mensaje>
-				\end{lstlisting}
+\begin{lstlisting}
+$ git commit -m <mensaje>
+\end{lstlisting}
 				El mensaje debe ser autoexplicativo. Se debe preceder con 
 				\texttt{-m}
 			}
 		\item{
-				Abriendo algun editor de texto para explicar con mayor detalle 
+				Abriendo algún editor de texto para explicar con mayor detalle 
 				el commit
-				\begin{lstlisting}
-					$ git commit
-				\end{lstlisting}
+\begin{lstlisting}
+$ git commit
+\end{lstlisting}
 				El mensaje que se escribe en el commit debe tener un cierto 
 				formato.
 			}
@@ -166,26 +166,26 @@
 	\frametitle{Formato del mensaje}
 
 	\begin{center}
-		\begin{Verbatim}[fontsize=\footnotesize]
-			Concisa, no mas de 50 carácteres.
+\begin{Verbatim}[fontsize=\footnotesize]
+Concisa, no mas de 50 carácteres.
 
-			Texto explicativo mas detallado (si es necesario) de aproximadamente 72 
-			carácteres de ancho. En algunos contextos, la primera linea es tratada 
-			como el asunto de un correo electrónico y el resto del texto como el 
-			cuerpo. La línea en blanco que separa el sumario del cuerpo siempre 
-			debe existir, a menos que no se escriba el cuerpo.
+Texto explicativo mas detallado (si es necesario) de aproximadamente 72 
+carácteres de ancho. En algunos contextos, la primera linea es tratada 
+como el asunto de un correo electrónico y el resto del texto como el 
+cuerpo. La línea en blanco que separa el sumario del cuerpo siempre 
+debe existir, a menos que no se escriba el cuerpo.
 
-			Escribe el mensaje del commit en tercera persona tiempo presente. Se 
-			debe escribir: "Se arregla bug del botón enviar encuesta" y no "Arreglé 
-			el bug del botón enviar encuesta" o "Se arregló el bug..."
+Los párrafos se separan por una linea en blanco.
 
-			Los párrafos se separan por una linea en blanco.
+Escribe el mensaje del commit en tercera persona tiempo presente. Se 
+debe escribir: "Se arregla bug del botón enviar encuesta" y no "Arreglé 
+el bug del botón enviar encuesta" o "Se arregló el bug..."
 
-			 - Las viñetas empiezan con un guión '-' o asterisco '*', para 
-			 expresar una lista de cosas que abarca el commit.
+ - Las viñetas empiezan con un guión '-' o asterisco '*', para 
+ expresar una lista de cosas que abarca el commit.
 
-			 - Y deben separarse por una linea en blanco.
-		\end{Verbatim}
+ - Y deben separarse por una linea en blanco.
+\end{Verbatim}
 	\end{center}
 \end{frame}
 
@@ -228,6 +228,7 @@
 	que falten hacer pruebas unitarias \pause... o quizás está todo perfecto y 
 	listo para integrar.
 	\pause
+
 	Los \textit{pull request} están diseñados para incentivar y capturar este 
 	tipo de conversaciones.
 \end{frame}
@@ -241,9 +242,9 @@
 	En nuestro caso muy puntual sería correr el server (verificando previamente 
 	que estamos en nuestra rama)
 
-	\begin{lstlisting}
-		$ rails s
-	\end{lstlisting}
+\begin{lstlisting}
+$ rails s
+\end{lstlisting}
 
 	Y probar las nuevas funcionalidades que implementamos.
 \end{frame}
